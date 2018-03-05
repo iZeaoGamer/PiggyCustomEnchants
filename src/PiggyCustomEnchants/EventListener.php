@@ -1125,14 +1125,6 @@ class EventListener implements Listener
                             $effect->setVisible(false);
                             $damager->addEffect($effect);
                         }
-                        $enchantment = $armor->getEnchantment(CustomEnchantsIds::FROZEN);
-                        if ($enchantment !== null && $damager->hasEffect(Effect::SLOWNESS) !== true) {
-                            $effect = Effect::getEffect(Effect::SLOWNESS);
-                            $effect->setAmplifier($enchantment->getLevel());
-                            $effect->setDuration(60 * $enchantment->getLevel());
-                            $effect->setVisible(false);
-                            $damager->addEffect($effect);
-                        }
                         $enchantment = $armor->getEnchantment(CustomEnchantsIds::REVULSION);
                         if ($enchantment !== null && $damager->hasEffect(Effect::NAUSEA) !== true) {
                             $effect = Effect::getEffect(Effect::NAUSEA);
