@@ -171,7 +171,6 @@ class Main extends PluginBase
         CustomEnchantsIds::FERTILIZER => ["Fertilizer", "Hoe", "Interact", "Uncommon", 3, "Creates farmland in a level radius around the block"],
         CustomEnchantsIds::FOCUSED => ["Focused", "Helmets", "Effect", "Uncommon", 5, "Nausea will affect you less"],
         CustomEnchantsIds::FORCEFIELD => ["Forcefield", "Armor", "Equip", "Mythic", 5, "Deflects projectiles and living entities in a 0.75x (x = # of armor pieces)"],
-        CustomEnchantsIds::FROZEN => ["Frozen", "Armor", "Damaged", "Rare", 5, "Gives slowness to enemy when hit"],
         CustomEnchantsIds::GEARS => ["Gears", "Boots", "Equip", "Uncommon", 5, "Gives speed"],
         CustomEnchantsIds::GLOWING => ["Glowing", "Helmets", "Equip", "Common", 1, "Gives night vision"],
         CustomEnchantsIds::GOOEY => ["Gooey", "Weapons", "Damage", "Uncommon", 5, "Flings enemy into the air"],
@@ -472,7 +471,7 @@ class Main extends PluginBase
             }
             if ($enchant == null) {
                 if ($sender !== null) {
-                    $sender->sendMessage(TextFormat::RED . "Invalid enchantment.");
+                    $sender->sendMessage(TextFormat::RED . "§2Invalid enchantment. Are you sure this is the right enchant?");
                 }
                 continue;
             }
