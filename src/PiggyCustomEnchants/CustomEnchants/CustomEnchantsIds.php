@@ -18,21 +18,21 @@ class CustomEnchantsIds
     const SHOCKWAVE = 106;*/
     const AUTOREPAIR = 107;
     const CRIPPLE = 108;
-    const CRIPPLINGSTRIKE = 109;
-    //const THUNDERBLOW = 110;
-    const VAMPIRE = 111;
-    //const DEEPWOUNDS = 112;
-    const CHARGE = 113;
-    const AERIAL = 114;
-    const WITHER = 115;
-    //const HEADLESS = 116;
-    const DISARMING = 117;
-    const SOULBOUND = 118;
-    const HALLUCINATION = 119;
-    const BLESSED = 120;
-    const DISARMOR = 121;
-    const BACKSTAB = 122;
-    const LIGHTNING = 123;
+    const CRIPPLINGSTRIKE = 108;
+    //const THUNDERBLOW = 109;
+    const VAMPIRE = 110;
+    //const DEEPWOUNDS = 111;
+    const CHARGE = 112;
+    const AERIAL = 113;
+    const WITHER = 114;
+    //const HEADLESS = 115;
+    const DISARMING = 116;
+    const SOULBOUND = 117;
+    const HALLUCINATION = 118;
+    const BLESSED = 119;
+    const DISARMOR = 120;
+    const BACKSTAB = 121;
+    const LIGHTNING = 122;
 
     //TOOLS
     const EXPLOSIVE = 200; //Not accurate
