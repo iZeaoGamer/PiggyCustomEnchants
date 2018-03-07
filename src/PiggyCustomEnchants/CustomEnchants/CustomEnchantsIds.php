@@ -10,14 +10,13 @@ class CustomEnchantsIds
 {
     //GLOBAL
     const LIFESTEAL = 100;
-    const DEATHBRINGER = 101;
-    const GOOEY = 102;
-    const POISON = 103;
-    /*const BLOCK = 104;
-    const ICEASPECT = 105;
-    const SHOCKWAVE = 106;*/
-    const AUTOREPAIR = 107;
-    const CRIPPLE = 108;
+    const GOOEY = 101;
+    const POISON = 102;
+    /*const BLOCK = 103;
+    const ICEASPECT = 104;
+    const SHOCKWAVE = 105;*/
+    const AUTOREPAIR = 106;
+    const CRIPPLE = 107;
     const CRIPPLINGSTRIKE = 108;
     //const THUNDERBLOW = 109;
     const VAMPIRE = 110;
