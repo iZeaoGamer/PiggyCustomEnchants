@@ -438,11 +438,6 @@ class EventListener implements Listener
                     $damager->setHealth($damager->getMaxHealth());
                 }
             }
-            $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::DEATHBRINGER);
-            if ($enchantment !== null) {
-                $damage = 2 + ($enchantment->getLevel() / 10);
-                $event->setDamage($event->getDamage() + $damage);
-            }
             $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::GOOEY);
             if ($enchantment !== null) {
                 $task = new GoeyTask($this->plugin, $entity, $enchantment->getLevel());
