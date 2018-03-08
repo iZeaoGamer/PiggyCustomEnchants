@@ -156,8 +156,6 @@ class Main extends PluginBase
         CustomEnchantsIds::CRIPPLINGSTRIKE => ["Cripple", "Weapons", "Damage", "Common", 5, "Gives enemies nausea and slowness"],
         CustomEnchantsIds::CRIPPLE => ["Cripple", "Weapons", "Damage", "Common", 5, "Gives enemies nausea and slowness"],
         CustomEnchantsIds::CURSED => ["Cursed", "Armor", "Damaged", "Uncommon", 5, "Gives wither to enemy when hit"],
-        CustomEnchantsIds::DISARMING => ["Disarming", "Weapons", "Damage", "Uncommon", 5, "10l% chance to disarm enemy"],
-        CustomEnchantsIds::DISARMOR => ["Disarmor", "Weapons", "Damage", "Uncommon", 5, "10l% chance to disarmor enemy"],
         CustomEnchantsIds::DRILLER => ["Driller", "Tools", "Break", "Uncommon", 5, "Breaks a 3 by 3 by 1 + level"],
         CustomEnchantsIds::DRUNK => ["Drunk", "Armor", "Damaged", "Rare", 5, "Gives slowness, mining fatigue, and nausea to enemy when hit"],
         CustomEnchantsIds::ENDERSHIFT => ["Endershift", "Armor", "Damaged", "Rare", 5, "Gives speed and extra health when low on health"],
@@ -198,7 +196,6 @@ class Main extends PluginBase
         CustomEnchantsIds::PARACHUTE => ["Parachute", "Chestplate", "Equip", "Uncommon", 1, "Slows your fall (above 3 blocks)s"],
         CustomEnchantsIds::PARALYZE => ["Paralyze", "Bow", "Damage", "Rare", 5, "Gives slowness, blindness, and weakness"],
         CustomEnchantsIds::PIERCING => ["Piercing", "Bow", "Damage", "Rare", 5, "Ignores armor when dealing damage"],
-        CustomEnchantsIds::POISON => ["Poison", "Weapons", "Damage", "Uncommon", 5, "Poisons enemies"],
         CustomEnchantsIds::POISONOUSCLOUD => ["Poisonous Cloud", "Armor", "Equip", "Rare", 3, ""],
         CustomEnchantsIds::POISONED => ["Poisoned", "Armor", "Damaged", "Uncommon", 5, "Poisons enemy when hit"],
         CustomEnchantsIds::PORKIFIED => ["Porkified", "Bow", "Shoot", "Mythic", 3, "Shoot pigs"],
@@ -228,7 +225,7 @@ class Main extends PluginBase
 
     public $incompatibilities = [
         CustomEnchantsIds::GROW => [CustomEnchantsIds::SHRINK],
-        CustomEnchantsIds::PORKIFIED => [CustomEnchantsIds::BLAZE, CustomEnchantsIds::WITHERSKULL],
+        CustomEnchantsIds::PORKIFIED => [CustomEnchantsIds::WITHERSKULL],
         CustomEnchantsIds::VOLLEY => [CustomEnchantsIds::GRAPPLING]
     ];
 
