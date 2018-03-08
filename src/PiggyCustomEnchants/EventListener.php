@@ -396,14 +396,6 @@ class EventListener implements Listener
         //TODO: Check to make sure you can use enchant with item
         if ($event instanceof EntityDamageEvent) {
             if ($entity instanceof Living) {
-                $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::POISON);
-                if ($enchantment !== null && $entity->hasEffect(Effect::POISON) !== true) {
-                    $effect = Effect::getEffect(Effect::POISON);
-                    $effect->setAmplifier($enchantment->getLevel());
-                    $effect->setDuration(60 * $enchantment->getLevel());
-                    $effect->setVisible(false);
-                    $entity->addEffect($effect);
-                }
                 $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::CRIPPLINGSTRIKE);
                 if ($enchantment !== null) {
                     if (!$entity->hasEffect(Effect::NAUSEA)) {
