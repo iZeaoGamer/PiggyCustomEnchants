@@ -471,18 +471,6 @@ class EventListener implements Listener
                     $event->setDamage($event->getDamage() * (1 + 0.10 * $enchantment->getLevel()));
                 }
             }
-            $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::DISARMING);
-            if ($enchantment !== null) {
-                if ($entity instanceof Player) {
-                    $chance = 10 * $enchantment->getLevel();
-                    $random = mt_rand(0, 100);
-                    if ($random <= $chance) {
-                        $item = $entity->getInventory()->getItemInHand();
-                        $entity->getInventory()->removeItem($item);
-                        $entity->dropItem($item);
-                    }
-                }
-            }
             $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::HALLUCINATION);
             if ($enchantment !== null) {
                 $chance = 5 * $enchantment->getLevel();
@@ -502,20 +490,6 @@ class EventListener implements Listener
                     foreach ($damager->getEffects() as $effect) {
                         if ($effect->isBad()) {
                             $damager->removeEffect($effect->getId());
-                        }
-                    }
-                }
-            }
-            $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::DISARMOR);
-            if ($enchantment !== null) {
-                if ($entity instanceof Player) {
-                    $chance = 10 * $enchantment->getLevel();
-                    $random = mt_rand(0, 100);
-                    if ($random <= $chance) {
-                        if (count($armor = $entity->getArmorInventory()->getContents(false)) > 0) {
-                            $item = $armor[array_rand($armor)];
-                            $entity->getArmorInventory()->removeItem($item);
-                            $entity->dropItem($item);
                         }
                     }
                 }
@@ -871,15 +845,6 @@ class EventListener implements Listener
                 $newentity->spawnToAll();
                 $entity->close();
                 $entity = $newentity;
-            }
-            $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::BLAZE);
-            if ($enchantment !== null && $entity instanceof PiggyFireball !== true) {
-                $nbt = Entity::createBaseNBT($entity, $damager->getDirectionVector(), $entity->yaw, $entity->pitch);
-                $fireball = Entity::createEntity("PiggyFireball", $damager->getLevel(), $nbt, $damager, isset($entity->placeholder) ? $entity->placeholder : false);
-                $fireball->setMotion($fireball->getMotion()->multiply($event->getForce()));
-                $fireball->spawnToAll();
-                $entity->close();
-                $entity = $fireball;
             }
             $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::PORKIFIED);
             if ($enchantment !== null && $entity instanceof PigProjectile !== true) {
