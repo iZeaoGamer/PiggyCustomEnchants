@@ -11,27 +11,24 @@ class CustomEnchantsIds
     //GLOBAL
     const LIFESTEAL = 100;
     const GOOEY = 101;
-    const POISON = 102;
-    /*const BLOCK = 103;
-    const ICEASPECT = 104;
-    const SHOCKWAVE = 105;*/
-    const AUTOREPAIR = 106;
-    const CRIPPLE = 107;
-    const CRIPPLINGSTRIKE = 108;
-    //const THUNDERBLOW = 109;
-    const VAMPIRE = 110;
-    //const DEEPWOUNDS = 111;
-    const CHARGE = 112;
-    const AERIAL = 113;
-    const WITHER = 114;
-    //const HEADLESS = 115;
-    const DISARMING = 116;
-    const SOULBOUND = 117;
-    const HALLUCINATION = 118;
-    const BLESSED = 119;
-    const DISARMOR = 120;
-    const BACKSTAB = 121;
-    const LIGHTNING = 122;
+    /*const BLOCK = 102;
+    const ICEASPECT = 103;
+    const SHOCKWAVE = 104;*/
+    const AUTOREPAIR = 105;
+    const CRIPPLE = 106;
+    const CRIPPLINGSTRIKE = 107;
+    //const THUNDERBLOW = 108;
+    const VAMPIRE = 109;
+    //const DEEPWOUNDS = 110;
+    const CHARGE = 111;
+    const AERIAL = 112;
+    const WITHER = 113;
+    //const HEADLESS = 114;
+    const SOULBOUND = 115;
+    const HALLUCINATION = 116;
+    const BLESSED = 117;
+    const BACKSTAB = 118;
+    const LIGHTNING = 119;
 
     //TOOLS
     const EXPLOSIVE = 200; //Not accurate
@@ -60,12 +57,11 @@ class CustomEnchantsIds
     const SHUFFLE = 308;
     const BOUNTYHUNTER = 309; //Not accurate
     const HEALING = 310;
-    const BLAZE = 311;
-    const HEADHUNTER = 312;
-    const GRAPPLING = 313;
-    const PORKIFIED = 314;
-    const MISSILE = 315;
-    const PLACEHOLDER = 316;
+    const HEADHUNTER = 311;
+    const GRAPPLING = 312;
+    const PORKIFIED = 313;
+    const MISSILE = 314;
+    const PLACEHOLDER = 315;
 
     //ARMOR
     const MOLTEN = 400;
