@@ -174,7 +174,6 @@ class Main extends PluginBase
         CustomEnchantsIds::JETPACK => ["Jetpack", "Boots", "Sneak", "Rare", 3, "Enable flying (you fly where you look) when you sneak."],
         CustomEnchantsIds::JACKPOT => ["Jackpot", "Tools", "Break", "Mythic", 10, "10l% chance to increase the ore tier"],
         CustomEnchantsIds::LIFESTEAL => ["Lifesteal", "Weapons", "Damage", "Common", 5, "Heals when damaging enemies"],
-        CustomEnchantsIds::LIGHTNING => ["Lightning", "Weapons", "Damage", "Rare", 5, "10l% chance to strike enemies with lightning"],
         CustomEnchantsIds::LUMBERJACK => ["Lumberjack", "Axe", "Break", "Rare", 1, "Mines all logs connected to log when broken"],
         CustomEnchantsIds::MAGMAWALKER => ["Magma Walker", "Boots", "Move", "Uncommon", 2, "Turns lava into obsidian around you"],
         CustomEnchantsIds::MEDITATION => ["Meditation", "Helmets", "Equip", "Uncommon", 5, "Replenish health and hunger every 20 seconds (half a hunger bar/heart per level)"],
