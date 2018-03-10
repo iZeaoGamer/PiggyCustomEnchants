@@ -213,7 +213,6 @@ class Main extends PluginBase
 
     public $incompatibilities = [
         CustomEnchantsIds::GROW => [CustomEnchantsIds::SHRINK],
-        CustomEnchantsIds::PORKIFIED => [CustomEnchantsIds::WITHERSKULL],
         CustomEnchantsIds::VOLLEY => [CustomEnchantsIds::GRAPPLING]
     ];
 
