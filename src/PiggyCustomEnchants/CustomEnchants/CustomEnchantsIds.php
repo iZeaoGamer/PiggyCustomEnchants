@@ -28,7 +28,6 @@ class CustomEnchantsIds
     const HALLUCINATION = 116;
     const BLESSED = 117;
     const BACKSTAB = 118;
-    const LIGHTNING = 119;
 
     //TOOLS
     const EXPLOSIVE = 200; //Not accurate
@@ -47,7 +46,6 @@ class CustomEnchantsIds
 
     //BOWS
     //const BOMBARDMENT = 300;
-    const WITHERSKULL = 301;
     //const FIREWORK = 302;
     const PARALYZE = 303;
     const MOLOTOV = 304; //Falling sand fire doesn't appear
@@ -59,9 +57,7 @@ class CustomEnchantsIds
     const HEALING = 310;
     const HEADHUNTER = 311;
     const GRAPPLING = 312;
-    const PORKIFIED = 313;
-    const MISSILE = 314;
-    const PLACEHOLDER = 315;
+    const PLACEHOLDER = 313;
 
     //ARMOR
     const MOLTEN = 400;
