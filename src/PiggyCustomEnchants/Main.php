@@ -6,10 +6,6 @@ use PiggyCustomEnchants\Blocks\PiggyObsidian;
 use PiggyCustomEnchants\Commands\CustomEnchantCommand;
 use PiggyCustomEnchants\CustomEnchants\CustomEnchants;
 use PiggyCustomEnchants\CustomEnchants\CustomEnchantsIds;
-use PiggyCustomEnchants\Entities\PiggyFireball;
-use PiggyCustomEnchants\Entities\PiggyLightning;
-use PiggyCustomEnchants\Entities\PiggyWitherSkull;
-use PiggyCustomEnchants\Entities\PigProjectile;
 use PiggyCustomEnchants\Entities\VolleyArrow;
 use PiggyCustomEnchants\Tasks\AutoAimTask;
 use PiggyCustomEnchants\Tasks\CactusTask;
@@ -88,11 +84,7 @@ class Main extends PluginBase
     ];
 
     const PIGGY_ENTITIES = [
-        PiggyFireball::class,
-        PiggyLightning::class,
-        PigProjectile::class,
-        VolleyArrow::class,
-        PiggyWitherSkull::class
+        VolleyArrow::class
     ];
 
     public $berserkercd;
@@ -186,7 +178,6 @@ class Main extends PluginBase
         CustomEnchantsIds::LUMBERJACK => ["Lumberjack", "Axe", "Break", "Rare", 1, "Mines all logs connected to log when broken"],
         CustomEnchantsIds::MAGMAWALKER => ["Magma Walker", "Boots", "Move", "Uncommon", 2, "Turns lava into obsidian around you"],
         CustomEnchantsIds::MEDITATION => ["Meditation", "Helmets", "Equip", "Uncommon", 5, "Replenish health and hunger every 20 seconds (half a hunger bar/heart per level)"],
-        CustomEnchantsIds::MISSILE => ["Missile", "Bow", "Projectile_Hit", "Rare", 5, "Spawns tnt on hit"],
         CustomEnchantsIds::MOLOTOV => ["Molotov", "Bow", "Projectile_Hit", "Uncommon", 5, "Starts fire around target"],
         CustomEnchantsIds::MOLTEN => ["Molten", "Armor", "Damaged", "Rare", 5, "Sets enemy on fire when hit"],
         CustomEnchantsIds::OBSIDIANSHIELD => ["Obsidian Shield", "Armor", "Equip", "Common", 5, "Gives fire resistance while worn"],
@@ -197,7 +188,6 @@ class Main extends PluginBase
         CustomEnchantsIds::PIERCING => ["Piercing", "Bow", "Damage", "Rare", 5, "Ignores armor when dealing damage"],
         CustomEnchantsIds::POISONOUSCLOUD => ["Poisonous Cloud", "Armor", "Equip", "Rare", 3, ""],
         CustomEnchantsIds::POISONED => ["Poisoned", "Armor", "Damaged", "Uncommon", 5, "Poisons enemy when hit"],
-        CustomEnchantsIds::PORKIFIED => ["Porkified", "Bow", "Shoot", "Mythic", 3, "Shoot pigs"],
         CustomEnchantsIds::PROWL => ["Prowl", "Chestplate", "Equip", "Rare", 1, "Goes invisible when sneaking, gives slowness"],
         CustomEnchantsIds::QUICKENING => ["Quickening", "Tools", "Break", "Uncommon", 5, "Gives speed when block is broken"],
         CustomEnchantsIds::RADAR => ["Radar", "Compass", "Inventory", "Rare", 5, "Points to nearest player in a 50l (l = level) range."],
@@ -218,7 +208,6 @@ class Main extends PluginBase
         CustomEnchantsIds::VAMPIRE => ["Vampire", "Weapons", "Damage", "Uncommon", 1, "Heals by part of damage dealt"],
         CustomEnchantsIds::VOLLEY => ["Volley", "Bow", "Shoot", "Uncommon", 5, "Shoot multiple arrows in a cone"],
         CustomEnchantsIds::WITHER => ["Wither", "Weapons", "Damage", "Uncommon", 5, "Gives enemies wither"],
-        CustomEnchantsIds::WITHERSKULL => ["Wither Skull", "Bow", "Shoot", "Mythic", 1, "Shoots Wither Skull"],
         CustomEnchantsIds::PLACEHOLDER => ["Placeholder", "Bow", "Shoot", "Rare", 1, ""]
     ];
 
