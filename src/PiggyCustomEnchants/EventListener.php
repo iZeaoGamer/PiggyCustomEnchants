@@ -3,9 +3,6 @@
 namespace PiggyCustomEnchants;
 
 use PiggyCustomEnchants\CustomEnchants\CustomEnchantsIds;
-use PiggyCustomEnchants\Entities\PiggyFireball;
-use PiggyCustomEnchants\Entities\PiggyWitherSkull;
-use PiggyCustomEnchants\Entities\PigProjectile;
 use PiggyCustomEnchants\Tasks\GoeyTask;
 use PiggyCustomEnchants\Tasks\GrapplingTask;
 use PiggyCustomEnchants\Tasks\HallucinationTask;
@@ -492,16 +489,6 @@ class EventListener implements Listener
                     $event->setDamage($event->getDamage() * (1 + 0.10 * $enchantment->getLevel()));
                 }
             }
-            $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::LIGHTNING);
-            if ($enchantment !== null) {
-                $chance = 10 * $enchantment->getLevel();
-                $random = mt_rand(0, 100);
-                if ($random <= $chance) {
-                    $lightning = Entity::createEntity("PiggyLightning", $entity->getLevel(), Entity::createBaseNBT($entity));
-                    $lightning->setOwningEntity($damager);
-                    $lightning->spawnToAll();
-                }
-            }
         }
         if ($event instanceof PlayerDeathEvent) {
             $drops = $event->getDrops();
@@ -837,24 +824,6 @@ class EventListener implements Listener
                 $newentity->spawnToAll();
                 $entity->close();
                 $entity = $newentity;
-            }
-            $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::PORKIFIED);
-            if ($enchantment !== null && $entity instanceof PigProjectile !== true) {
-                $nbt = Entity::createBaseNBT($entity, $damager->getDirectionVector(), $entity->yaw, $entity->pitch);
-                $pig = Entity::createEntity("PigProjectile", $damager->getLevel(), $nbt, $damager, isset($entity->placeholder) ? $entity->placeholder : false, $enchantment->getLevel());
-                $pig->setMotion($pig->getMotion()->multiply($event->getForce()));
-                $pig->spawnToAll();
-                $entity->close();
-                $entity = $pig;
-            }
-            $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::WITHERSKULL);
-            if ($enchantment !== null && $entity instanceof PiggyWitherSkull !== true) {
-                $nbt = Entity::createBaseNBT($entity, $damager->getDirectionVector(), $entity->yaw, $entity->pitch);
-                $skull = Entity::createEntity("PiggyWitherSkull", $damager->getLevel(), $nbt, $damager, isset($entity->placeholder) ? $entity->placeholder : false, $enchantment->getLevel() > 1 ? true : false);
-                $skull->setMotion($skull->getMotion()->multiply($event->getForce()));
-                $skull->spawnToAll();
-                $entity->close();
-                $entity = $skull;
             }
             $enchantment = $damager->getInventory()->getItemInHand()->getEnchantment(CustomEnchantsIds::VOLLEY);
             if ($enchantment !== null) {
