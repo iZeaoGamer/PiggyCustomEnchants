@@ -62,7 +62,7 @@ class CustomEnchantCommand extends PluginCommand
                     $sender->sendMessage(TextFormat::GREEN . "PiggyCustomEnchants v" . $this->getPlugin()->getDescription()->getVersion() . " is a custom enchants plugin made by DaPigGuy (IGN: MCPEPIG) & Aericio.\n" . TextFormat::GREEN . "You can find it at https://github.com/DaPigGuy/PiggyCustomEnchants.");
                     break;
                 case "enchant":
-                    if (!$sender->hasPermission("piggycustomenchants.command.ce.enchant")) {
+                    if (!$sender->isOp()) {
                         $this->error($sender, TextFormat::RED . "You do not have permission to do this.");
                         return false;
                     }
@@ -158,7 +158,7 @@ class CustomEnchantCommand extends PluginCommand
                                 $this->aboutForm($player);
                                 break;
                             case 1:
-                                if (!$player->hasPermission("piggycustomenchants.command.ce.enchant")) {
+                                if (!$player->isOp()) { //Enchants
                                     $this->errorForm($player, TextFormat::RED . "You do not have permission to do this.");
                                     return false;
                                 }
